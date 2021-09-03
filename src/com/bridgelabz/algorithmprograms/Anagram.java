@@ -4,23 +4,6 @@ import java.util.Scanner;
 
 public class Anagram {
 
-	public boolean checkIfAnagrams(String firstWord, String secondWord) {
-
-		firstWord = firstWord.toLowerCase();
-		secondWord = secondWord.toLowerCase();
-		char[] firstWordArray = firstWord.toCharArray();
-		char[] secondWordArray = secondWord.toCharArray();
-		Arrays.sort(firstWordArray);
-		Arrays.sort(secondWordArray);
-		int compareResult = Arrays.compare(firstWordArray, secondWordArray);
-
-		if(compareResult == 0) {
-			return true;
-		}
-		else {
-			return false;
-		}
-	}
 
 	public static void main(String[] args) {
 
@@ -40,6 +23,23 @@ public class Anagram {
 
 	}
 
+	public boolean checkIfAnagrams(String firstWord, String secondWord) {
+
+		firstWord = firstWord.toLowerCase();
+		secondWord = secondWord.toLowerCase();
+		char[] firstWordArray = firstWord.toCharArray();
+		char[] secondWordArray = secondWord.toCharArray();
+		Arrays.sort(firstWordArray);
+		Arrays.sort(secondWordArray);
+		int compareResult = Arrays.compare(firstWordArray, secondWordArray);
+
+		if(compareResult == 0) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
 
 
 }
